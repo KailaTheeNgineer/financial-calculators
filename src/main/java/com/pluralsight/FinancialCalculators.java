@@ -3,8 +3,11 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-public class financialCalculators {
-
+public class FinancialCalculators {
+// lowerCamelCase is for Variable names
+// UpperCamelcase is for the Class name
+// snake_case is for projects or directories
+// kebab-case is for projects or directories
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
 
@@ -33,8 +36,8 @@ public class financialCalculators {
             double totalPayment = monthlyPayment * numberPayment;
             double totalInterest = totalPayment - principal;
 
-        System.out.println("The monthly payment is: $" + monthlyPayment);
-        System.out.println("The Interest Is: " + totalInterest);
+            System.out.printf("The Monthly Payment is: $%.2f\n", monthlyPayment);;
+            System.out.printf("The Interest is: $%.2f\n", totalInterest);
         }
 
        else if (calculatorType.equalsIgnoreCase("F")) {
@@ -51,8 +54,8 @@ public class financialCalculators {
             FV *= PV;
             double EarnedInterest = FV - PV;
 
-            System.out.println("The Future Value is: $" + FV);
-            System.out.println("The Earned Interest is: " + EarnedInterest);
+            System.out.printf("The Future Values is: $%.2f\n", FV);
+            System.out.printf("The Earned Interest is: $%.2f\n", EarnedInterest);
 
             //  FV = PV (1+R)^n
         }
@@ -65,12 +68,3 @@ public class financialCalculators {
 
 
 }
-
-
-
-
-// 495.09 * 12 (months) = 5940 (in 1 year)
-// 5940 * 15 (years) = 89100 (with interest)
-// 89100 - 53000 (starting loan) = 36100 (interest owed) 53000 left
-// .07625 * 15 = 1.14375
-// 89100 / 15 = 5940
